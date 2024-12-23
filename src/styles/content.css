@@ -1,0 +1,12 @@
+/* Remove edit buttons and unwanted elements */
+.mw-editsection,
+.mw-empty-elt,
+img[alt="Edit this at Wikidata"],
+span.mw-editsection,
+a.mw-editsection-visualeditor,
+.mw-editsection-bracket,
+[data-mw-editsection] {
+  display: none !important;
+}
+
+/* Rest of the file remains the same... */

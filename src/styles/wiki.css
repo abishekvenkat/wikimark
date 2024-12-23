@@ -1,0 +1,29 @@
+/* Wiki-specific styles */
+.info-table {
+  @apply w-full border-collapse my-4;
+}
+
+.info-table th,
+.info-table td {
+  @apply border p-2 text-sm;
+}
+
+.info-table th {
+  @apply bg-gray-100 font-semibold;
+}
+
+.toc-container {
+  @apply fixed left-0 top-16 w-64 h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-gray-900 border-r dark:border-gray-800 p-4;
+}
+
+.toc-list {
+  @apply space-y-2;
+}
+
+.toc-item {
+  @apply block py-1 px-2 rounded transition-colors hover:bg-gray-100 dark:hover:bg-gray-800;
+}
+
+.toc-item.active {
+  @apply bg-gray-200 dark:bg-gray-700;
+}

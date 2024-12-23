@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  }
+
+  code {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+}
+
+@layer components {
+  /* Remove rounded corners */
+  button, 
+  input,
+  select {
+    @apply rounded-none !important;
+  }
+
+  /* Table of contents styles */
+  .toc-container {
+    @apply fixed left-0 top-16 w-64 h-[calc(100vh-4rem)] overflow-y-auto 
+           bg-white dark:bg-dark-900 border-r dark:border-dark-700 p-4;
+  }
+
+  .toc-list {
+    @apply space-y-2;
+  }
+
+  .toc-item {
+    @apply block py-1 px-2 transition-colors 
+           hover:bg-gray-100 dark:hover:bg-dark-700
+           text-gray-700 dark:text-gray-300;
+  }
+
+  .toc-item.active {
+    @apply bg-gray-200 dark:bg-dark-600 
+           text-gray-900 dark:text-white;
+  }
+}
